@@ -1,0 +1,50 @@
+<template>
+    <div class="team-box">
+        <h2>Team List</h2>
+        <div class="teamAddForm">
+            <div class="filterBox">
+                <div class="col-box">
+                    <div class="filter-title">Filter By Team:</div>
+                </div>
+                <div class="col-box">
+                    <select name="selectedTeam" onchange={filterByTeam}>
+                        <option value="All">All</option>
+                        <template if:true={teams.length}>
+                            <template for:each={teams} for:item="obj">
+                                <option key={obj.id} value={obj.id}>{obj.name}</option>
+                            </template>
+                        </template>
+                    </select>
+                </div>
+                <div class="clearboth"></div>
+            </div>
+
+            <!--Display all the team members-->
+            <div>
+                <ul class="teamListCard">
+                    <template if:true={teamMemberList.length}>
+                        <template for:each={teamMemberList} for:item="item">
+                            <li key={item.id}>
+                                <div>
+                                    <strong>Name:</strong>
+                                    <span>{item.name}</span>
+                                </div>
+                                <div>
+                                    <strong>Team:</strong>
+                                    <span class="lbr">{item.team}</span>
+                                </div>
+                                <div>
+                                    <strong>Skills:</strong>
+                                    <span>{item.skills}</span>
+                                </div>
+                               
+                            </li>
+                        </template>
+                    </template>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</template>

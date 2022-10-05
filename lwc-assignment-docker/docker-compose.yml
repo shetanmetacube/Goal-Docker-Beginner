@@ -1,0 +1,29 @@
+# docker-compose.yml
+
+version: "3.9"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: wuxA39203#%
+    ports: 
+      - '5432:5432'
+    volumes:
+      - dev_db:/var/lib/postgresql/data
+
+  lwc-1:
+    build:
+      context: .
+    environment:
+      DB_SCHEMA: postgres
+      DB_USER: postgres
+      DB_PASSWORD: wuxA39203#%
+      DB_HOST: localhost
+    depends_on:
+      - postgres
+    ports:
+      - '3001:3001'
+        
+volumes:
+  dev_db:

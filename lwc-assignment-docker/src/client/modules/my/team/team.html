@@ -1,0 +1,34 @@
+<template>
+    <div class="team-blocks">
+        <div class="blocks">
+             <!-- Add Team -->
+            <div class="team-box">
+                <h2>Add New Team</h2>
+                <div class="teamAddForm">
+                    <div>
+                        <label class="tealInputLabel">Team Name</label>
+                        <input 
+                            name="teamName"
+                            type="text"
+                            maxlength="50"
+                            value={teamName}
+                            oninput={handleTeamInput}
+                        >
+                    </div>
+                    <div>
+                        <button onclick={addNewTeam} class="button" type="button">Add Team</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <!-- Member Skills -->
+            <my-member-skills teams={teams} onhandleteam={handleMemberInTeam}></my-member-skills>
+        </div>
+        <div class="blocks">
+            <!-- Team List -->
+            <my-team-list team-member-list={teamMemberList} teams={teams} onfiltermember={handleFilter}></my-team-list>
+        </div>
+    </div>
+    
+</template>

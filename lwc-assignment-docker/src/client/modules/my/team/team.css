@@ -1,0 +1,50 @@
+.team-box{
+    border: 1px solid grey;
+    min-height: 450px;
+    width: 350px;   
+}
+.team-box h2{
+    margin: 0px auto;
+    background: #1581f1;
+    color: #fff;
+    padding: 5px;
+    font-size: 22px;
+}
+.tealInputLabel{
+    width: 100%;
+    display: block;
+}
+.teamAddForm{
+    padding: 15px;
+}
+.teamAddForm input, .teamAddForm select{
+    height: 35px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid #c6dee5;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+
+
+.button{
+    background: #1581f1;
+    color: #fff;
+    font-size: 16px;
+    border:0;
+    margin-top: 25px;
+    padding: 5px;
+    width: 125px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.blocks{
+    float: left;
+    border: 1px solid grey;
+    min-height: 450px;
+    width: 350px; 
+}
